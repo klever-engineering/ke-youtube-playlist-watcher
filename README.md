@@ -48,6 +48,19 @@ Or install a specific tag:
 The installer downloads the GitHub source archive for the requested tag,
 creates a local virtual environment, and installs the project into that venv.
 
+## Prompt rendering
+
+Render the analysis prompt for the first playlist video, or for a specific
+video id:
+
+```bash
+ke-youtube-playlist-watcher-prompt
+ke-youtube-playlist-watcher-prompt --video-id d8d9EZHU7fw
+```
+
+The prompt command uses the same playlist metadata, transcript fetch, and
+optional context files as the watcher.
+
 ## Releasing
 
 1. Update the changelog or release notes.

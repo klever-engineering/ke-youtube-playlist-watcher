@@ -14,12 +14,27 @@ with the corresponding Git tag and GitHub Release page.
   and `scripts/install.sh`.
 - Environment-driven configuration for playlist ID, runtime directory,
   transcript languages, and optional analysis context files.
+- Reusable prompt renderer for the first playlist video via
+  `ke-youtube-playlist-watcher-prompt`.
 
 ### Changed
 
 - Removed life-specific assumptions from the public code path.
 - Analysis prompts now read optional context files instead of hard-coded
   ecosystem documents.
+- The release package now exposes the prompt renderer as an installed console
+  command instead of requiring a source checkout.
+
+## v0.1.1 - 2026-07-06
+
+### Added
+
+- Reusable prompt rendering command for the first playlist video.
+- Better release packaging for installed use from tagged source archives.
+
+### Changed
+
+- AE deployment can now invoke the installed release binary directly.
 
 ## v0.1.0 - 2026-07-06
 
@@ -39,4 +54,3 @@ with the corresponding Git tag and GitHub Release page.
 - Repository uses an MIT license.
 - Runtime state is kept outside version control.
 - Installer blocks unsafe tar archive extraction paths.
-

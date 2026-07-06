@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ke-youtube-playlist-watcher"
+version = "0.1.0"
+description = "Watch a YouTube playlist, cache transcripts, and generate structured analyses."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+  "yt-dlp",
+  "youtube-transcript-api",
+]
+
+[project.scripts]
+ke-youtube-playlist-watcher = "cli:main"
+
+[tool.setuptools]
+py-modules = ["analyzer", "cli", "config", "memory", "scanner"]
+
+[tool.setuptools.package-dir]
+"" = "src"

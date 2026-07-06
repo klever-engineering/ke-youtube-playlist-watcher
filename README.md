@@ -4,6 +4,8 @@ Watcher for a public YouTube playlist. It scans for new videos, fetches
 metadata and transcripts, stores a queue of pending items, and generates a
 structured analysis report for each video.
 
+Release history is tracked in [CHANGELOG.md](./CHANGELOG.md).
+
 ## What it does
 
 - Polls a YouTube playlist for new uploads.

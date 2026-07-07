@@ -31,7 +31,9 @@ def _save_state(state: dict[str, Any]) -> None:
 
 
 def _playlist_url() -> str:
-    return config.playlist_url()
+    if not config.PLAYLIST_ID:
+        raise ValueError("YTW_PLAYLIST_ID is required")
+    return f"https://youtube.com/playlist?list={config.PLAYLIST_ID}"
 
 
 def _fetch_playlist_videos() -> list[dict[str, str]]:
@@ -263,4 +265,3 @@ def check_now() -> dict[str, Any]:
         logger.warning("Failed to write loop memory: %s", exc)
 
     return result
-

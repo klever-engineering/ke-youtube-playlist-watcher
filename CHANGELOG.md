@@ -7,6 +7,14 @@ with the corresponding Git tag and GitHub Release page.
 
 ## Unreleased
 
+## v0.1.2 - 2026-07-07
+
+### Fixed
+
+- Playlist scans now query the real YouTube playlist URL instead of the RSS
+  feed URL when using `yt-dlp`, restoring full playlist enumeration for
+  installed releases.
+
 ### Added
 
 - Initial release workflow with tag-based installs from GitHub Releases.
